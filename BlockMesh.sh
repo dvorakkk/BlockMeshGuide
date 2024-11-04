@@ -67,8 +67,8 @@ After=network.target
 
 [Service]
 User=$USERNAME
-ExecStart=$HOME_DIR/target/release/blockmesh-cli login --email $USER_EMAIL --password $USER_PASSWORD
-WorkingDirectory=$HOME_DIR/target/release
+ExecStart=$HOME_DIR/target/x86_64-unknown-linux-gnu/release/blockmesh-cli login --email $USER_EMAIL --password $USER_PASSWORD
+WorkingDirectory=$HOME_DIR/target/x86_64-unknown-linux-gnu/release
 Restart=on-failure
 
 [Install]
@@ -133,10 +133,10 @@ EOT"
         cd target/x86_64-unknown-linux-gnu/release/
 
         # Prompt user for input to update variables
-        echo "Enter your email for BlockMesh:"
-        read EMAIL
+        echo "Enter your  for BlockMesh:"
+        read USER_EMAIL
         echo "Enter your password for BlockMesh:"
-        read -s PASSWORD
+        read -s USER_PASSWORD
 
         # Create or update the service file
         sudo bash -c "cat <<EOT > /etc/systemd/system/blockmesh.service
@@ -146,7 +146,7 @@ After=network.target
 
 [Service]
 User=$USERNAME
-ExecStart=$HOME_DIR/target/x86_64-unknown-linux-gnu/release/blockmesh-cli login --email $EMAIL --password $PASSWORD
+ExecStart=$HOME_DIR/target/x86_64-unknown-linux-gnu/release/blockmesh-cli login --email $USER_EMAIL --password $USER_PASSWORD
 WorkingDirectory=$HOME_DIR/target/x86_64-unknown-linux-gnu/release
 Restart=on-failure
 
