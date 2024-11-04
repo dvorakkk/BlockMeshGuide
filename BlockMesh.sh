@@ -50,7 +50,7 @@ case $ACTION in
         rm blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
 
         # Navigate to the node folder
-        cd target/release
+        cd target/x86_64-unknown-linux-gnu/release/
 
         # Prompt user for input
         echo "Enter your email:"
