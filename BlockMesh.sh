@@ -40,7 +40,7 @@ case $ACTION in
         sleep 1
         
         # Download the BlockMesh binary
-        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.334/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
+        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.348/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
         
         # Extract the archive
         tar -xzvf blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
@@ -120,7 +120,7 @@ EOT"
         sleep 1
 
         # Download the new BlockMesh binary
-        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.334/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
+        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.348/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
 
         # Extract the archive
         tar -xzvf blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
