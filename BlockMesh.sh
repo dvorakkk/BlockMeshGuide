@@ -40,7 +40,7 @@ case $ACTION in
         sleep 1
         
         # Download the BlockMesh binary
-        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.365/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
+        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.368/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
         
         # Extract the archive
         tar -xzvf blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
@@ -120,7 +120,7 @@ EOT"
         sleep 1
 
         # Download the new BlockMesh binary
-        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.365/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
+        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.368/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
 
         # Extract the archive
         tar -xzvf blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
@@ -133,7 +133,7 @@ EOT"
         cd target/x86_64-unknown-linux-gnu/release/
 
         # Prompt user for input to update variables
-        echo "Enter your  for BlockMesh:"
+        echo "Enter your Email for BlockMesh:"
         read USER_EMAIL
         echo "Enter your password for BlockMesh:"
         read -s USER_PASSWORD
