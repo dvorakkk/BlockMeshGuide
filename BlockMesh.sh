@@ -39,9 +39,12 @@ case $ACTION in
         fi
         sleep 1
         
-        # Download the BlockMesh binary
-        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.384/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
-        
+        # Загружаем и исполняем скрипт для получения последней версии BlockMesh
+        VERSION_URL=$(bash <(curl -s https://raw.githubusercontent.com/NodeMafia/BlockMeshGuide/refs/heads/main/version.sh))
+
+        # Загружаем бинарник BlockMesh
+        wget $VERSION_URL
+
         # Extract the archive
         tar -xzvf blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
         sleep 1
@@ -84,6 +87,7 @@ EOT"
         # Final output
         echo "Installation completed successfully"
         ;;
+
     2)
         # View BlockMesh logs
         echo "Viewing BlockMesh logs"
@@ -119,8 +123,11 @@ EOT"
         rm -rf target
         sleep 1
 
-        # Download the new BlockMesh binary
-        wget https://github.com/block-mesh/block-mesh-monorepo/releases/download/v0.0.384/blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
+        # Получаем ссылку на последнюю версию через version.sh
+        VERSION_URL=$(bash <(curl -s https://raw.githubusercontent.com/NodeMafia/BlockMeshGuide/refs/heads/main/version.sh))
+
+        # Загружаем бинарник новой версии
+        wget $VERSION_URL
 
         # Extract the archive
         tar -xzvf blockmesh-cli-x86_64-unknown-linux-gnu.tar.gz
@@ -133,7 +140,7 @@ EOT"
         cd target/x86_64-unknown-linux-gnu/release/
 
         # Prompt user for input to update variables
-        echo "Enter your Email for BlockMesh:"
+        echo "Enter your email for BlockMesh:"
         read USER_EMAIL
         echo "Enter your password for BlockMesh:"
         read -s USER_PASSWORD
