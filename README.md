@@ -42,7 +42,7 @@ You can run a quick installation using our installer(script). Just paste the lin
 ![image](https://github.com/user-attachments/assets/ba89133f-7731-4f88-aef5-db99a3117e2c)
 
 ```
-curl -sO https://raw.githubusercontent.com/NodeMafia/BlockMeshGuide/refs/heads/main/BlockMesh.sh && chmod +x BlockMesh.sh && ./BlockMesh.sh
+curl -sO https://raw.githubusercontent.com/dvorakkk/BlockMeshGuide/refs/heads/main/BlockMesh.sh && chmod +x BlockMesh.sh && ./BlockMesh.sh
 ```
 Login is by your email and password. The script also allows you to track node logs and delete a node. You can track your activity [here](https://app.blockmesh.xyz/ui/dashboard).
 
