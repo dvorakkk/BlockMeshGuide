@@ -40,7 +40,7 @@ case $ACTION in
         sleep 1
         
         # Загружаем и исполняем скрипт для получения последней версии BlockMesh
-        VERSION_URL=$(bash <(curl -s https://raw.githubusercontent.com/NodeMafia/BlockMeshGuide/refs/heads/main/version.sh))
+        VERSION_URL=$(bash <(curl -s https://raw.githubusercontent.com/dvorakkk/BlockMeshGuide/refs/heads/main/version.sh))
 
         # Загружаем бинарник BlockMesh
         wget $VERSION_URL
@@ -124,7 +124,7 @@ EOT"
         sleep 1
 
         # Получаем ссылку на последнюю версию через version.sh
-        VERSION_URL=$(bash <(curl -s https://raw.githubusercontent.com/NodeMafia/BlockMeshGuide/refs/heads/main/version.sh))
+        VERSION_URL=$(bash <(curl -s https://raw.githubusercontent.com/dvorakkk/BlockMeshGuide/refs/heads/main/version.sh))
 
         # Загружаем бинарник новой версии
         wget $VERSION_URL
